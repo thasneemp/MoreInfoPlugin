@@ -1,0 +1,73 @@
+<idea-plugin>
+    <id>com.muhammed.thasneem.moreinfo.plugin.android</id>
+    <name>MoreInfo</name>
+    <version>1.0</version>
+    <vendor email="mhdthasneemp@gmail.com" url="http://www.github.com/thasneemp">mhdthasneemp</vendor>
+
+    <description><![CDATA[
+      Grab more information's from IDE<br>
+      StackOverflow
+      Google
+      Android
+      YouTube
+      Android Arsenal
+      Wikipedia
+    ]]></description>
+
+    <change-notes><![CDATA[
+      New Features<br>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+
+        <group id="org.jetbrains.tutorials.actions.GroupedActions" text="Search More" popup="true"
+               icon="/icons/luc.png">
+            <separator/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <add-to-group group-id="ConsoleEditorPopupMenu" anchor="first"/>
+            <action class="StackOverFlowSearch" id="SearchStackoverflow" icon="/icons/stack.png"
+                    text="Search on Stackoverflow"
+                    description="Click and Search the code on Stackoverflow"/>
+
+            <action class="GoogleSearch" id="GoogleSearch" icon="/icons/google.png"
+                    text="Search on Google"
+                    description="Click and Search the code on Google"/>
+
+            <action class="AndroidSearch" id="AndroidSearch" icon="/icons/android.png"
+                    text="Search on Android Developer"
+                    description="Click and Search the code on Android developer.com"/>
+
+            <action class="YouTubeSearch" id="YouTubeSearch" icon="/icons/youtube.png"
+                    text="Search on YouTube"
+                    description="Click and Search related videos on YouTube"/>
+
+            <action class="GitHubSearch" id="GitHubSearch" icon="/icons/github.png"
+                    text="Search on Github"
+                    description="Click and Search on Github"/>
+
+            <action class="AndroidArsenalSearch" id="AndroidArsenalSearch" icon="/icons/arsenal.png"
+                    text="Search on AndroidArsenal"
+                    description="Click and Search on Android Arsenal"/>
+
+            <action class="WikipediaSearch" id="WikipediaSearch" icon="/icons/wiki.png"
+                    text="Search on Wikipedia"
+                    description="Click and Search on Wikipedia"/>
+        </group>
+    </actions>
+
+</idea-plugin>
